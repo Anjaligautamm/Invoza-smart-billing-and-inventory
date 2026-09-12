@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Compiled C++ files
+*.o
+*.out
+*.exe
+app
+smartbill_server
+
+# Build folders
+build/
+bin/
+
+# Docker
+*.log
+
+# Temporary files
+*.tmp
+
