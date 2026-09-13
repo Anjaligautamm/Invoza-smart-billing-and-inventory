@@ -1,4 +1,4 @@
-const API = "/api";
+const API = "https://invoza-smart-billing-and-inventory-1.onrender.com/api";
 async function api(path, options = {}) {
   const r = await fetch(API + path, {
     headers: { "Content-Type": "application/json", ...(options.headers || {}) },
