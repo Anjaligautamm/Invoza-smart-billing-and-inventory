@@ -35,7 +35,7 @@ inline int closesocket(SOCKET s) {
 }
 
 #endif
-
+#include <cstdlib>
 #include <algorithm>
 #include <chrono>
 #include <cctype>
@@ -54,7 +54,8 @@ inline int closesocket(SOCKET s) {
 namespace fs = std::filesystem;
 using namespace std;
 
-const int PORT = 8080;
+const char* portEnv = std::getenv("PORT");
+int PORT = portEnv ? std::stoi(portEnv) : 8080;
 const string DB_DIR = "database";
 
 mutex dbMutex;
